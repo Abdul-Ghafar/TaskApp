@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
 
 
         //TODO
-        // This is simple api call just for this  task .
+        // This is simple api call just for this  task.
         // later on it should be implemented with viewmodel to prevent data call every time onCreateView is called when fragment is  recreated
         apiCallInterface = RetrofitClient.getRetrofitInstance().create(ApiCallInterface.class);
         Call<List<FoodData>> call = apiCallInterface.getAllData();
