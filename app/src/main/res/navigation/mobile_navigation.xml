@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.taskapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_home_posts"
+            app:destination="@id/nav_home_to_home_posts" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_home_to_home_service"
+            app:destination="@id/nav_home_to_home_service" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_service"
+        android:name="com.example.taskapp.ui.service.ServiceFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_service" />
+
+    <fragment
+        android:id="@+id/nav_posts"
+        android:name="com.example.taskapp.ui.posts.PostsFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_posts" />
+
+    <fragment
+        android:id="@+id/nav_home_to_home_posts"
+        android:name="com.example.taskapp.ui.home.SubHomeFragmentPosts"
+        android:label="subFrag posts"
+        tools:layout="@layout/fragment_home_sub_posts" />
+    <fragment
+        android:id="@+id/nav_home_to_home_service"
+        android:name="com.example.taskapp.ui.home.SubHomeFragmentService"
+        android:label="subFrag service"
+        tools:layout="@layout/fragment_home_sub_posts" />
+
+</navigation>
